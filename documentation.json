@@ -300,14 +300,14 @@
         },
         {
             "name": "ImageUploadComponent",
-            "id": "component-ImageUploadComponent-b7ed162aa43314f5b8643d18114f618bccfc6981599fdf1ee8580d583b2897c5f38cec5bc832064de19bca42fb84fc44f73d65e794c3fdffc8d78bc9b2edd8e4",
+            "id": "component-ImageUploadComponent-0375b3a28e605bed1cf9ec49cd8c63cc4ee302abca20792c8c3cbd490ff08e052ffc69fe582fb1ccd040e2c30cdc093d20c1366ebc20f40b1c7a8e7383ad8e18",
             "file": "src/app/image-upload/image-upload.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-image-upload",
+            "selector": "app-profile-picture",
             "styleUrls": [
                 "./image-upload.component.css"
             ],
@@ -321,159 +321,23 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "croppedImage",
-                    "defaultValue": "''",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 18
-                },
-                {
-                    "name": "fileInput",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "ElementRef<HTMLInputElement>",
-                    "optional": false,
-                    "description": "",
-                    "line": 20,
-                    "decorators": [
-                        {
-                            "name": "ViewChild",
-                            "stringifiedArguments": "'fileInput'"
-                        }
-                    ],
-                    "modifierKind": [
-                        170
-                    ]
-                },
-                {
-                    "name": "imageChangedEvent",
-                    "defaultValue": "''",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 17
-                },
-                {
-                    "name": "imageUrl",
+                    "name": "profileImage",
                     "defaultValue": "null",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string | ArrayBuffer | null",
                     "optional": false,
                     "description": "",
-                    "line": 13
-                },
-                {
-                    "name": "isCropping",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 16
-                },
-                {
-                    "name": "isDragging",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 15
-                },
-                {
-                    "name": "isImageUploaded",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 14
+                    "line": 79
                 }
             ],
             "methodsClass": [
-                {
-                    "name": "cancelCropping",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 62,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "cropImage",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 56,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "deleteImage",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 66,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "imageCropped",
-                    "args": [
-                        {
-                            "name": "event",
-                            "type": "ImageCroppedEvent",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 52,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "event",
-                            "type": "ImageCroppedEvent",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "onDragLeave",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 43,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
                 {
                     "name": "onDragOver",
                     "args": [
                         {
                             "name": "event",
-                            "type": "any",
+                            "type": "DragEvent",
                             "deprecated": false,
                             "deprecationMessage": ""
                         }
@@ -481,13 +345,13 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 38,
+                    "line": 92,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
                             "name": "event",
-                            "type": "any",
+                            "type": "DragEvent",
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
@@ -501,7 +365,7 @@
                     "args": [
                         {
                             "name": "event",
-                            "type": "any",
+                            "type": "DragEvent",
                             "deprecated": false,
                             "deprecationMessage": ""
                         }
@@ -509,13 +373,13 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 29,
+                    "line": 96,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
                             "name": "event",
-                            "type": "any",
+                            "type": "DragEvent",
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
@@ -525,11 +389,11 @@
                     ]
                 },
                 {
-                    "name": "onImageSelected",
+                    "name": "onFileSelected",
                     "args": [
                         {
                             "name": "event",
-                            "type": "any",
+                            "type": "Event",
                             "deprecated": false,
                             "deprecationMessage": ""
                         }
@@ -537,13 +401,13 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 22,
+                    "line": 81,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
                             "name": "event",
-                            "type": "any",
+                            "type": "Event",
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
@@ -551,75 +415,28 @@
                             }
                         }
                     ]
-                },
-                {
-                    "name": "startImageCropping",
-                    "args": [
-                        {
-                            "name": "event",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 47,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "event",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "triggerFileInput",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 71,
-                    "deprecated": false,
-                    "deprecationMessage": ""
                 }
             ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
             "hostListeners": [],
-            "standalone": true,
-            "imports": [
-                {
-                    "name": "CommonModule",
-                    "type": "module"
-                },
-                {
-                    "name": "ImageCropperComponent",
-                    "type": "component"
-                }
-            ],
+            "standalone": false,
+            "imports": [],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, ViewChild, ElementRef } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { ImageCropperComponent, ImageCroppedEvent } from 'ngx-image-cropper';\r\n\r\n@Component({\r\n  selector: 'app-image-upload',\r\n  standalone: true,\r\n  imports: [CommonModule, ImageCropperComponent],\r\n  templateUrl: './image-upload.component.html',\r\n  styleUrls: ['./image-upload.component.css'],\r\n})\r\nexport class ImageUploadComponent {\r\n  imageUrl: string | ArrayBuffer | null = null;\r\n  isImageUploaded: boolean = false;\r\n  isDragging: boolean = false;\r\n  isCropping: boolean = false;\r\n  imageChangedEvent: any = '';\r\n  croppedImage: any = '';\r\n\r\n  @ViewChild('fileInput') fileInput!: ElementRef<HTMLInputElement>; // Declare fileInput\r\n\r\n  onImageSelected(event: any): void {\r\n    const file = event.target.files[0];\r\n    if (file) {\r\n      this.startImageCropping(event);\r\n    }\r\n  }\r\n\r\n  onDrop(event: any): void {\r\n    event.preventDefault();\r\n    this.isDragging = false;\r\n    const file = event.dataTransfer.files[0];\r\n    if (file) {\r\n      this.startImageCropping(event);\r\n    }\r\n  }\r\n\r\n  onDragOver(event: any): void {\r\n    event.preventDefault();\r\n    this.isDragging = true;\r\n  }\r\n\r\n  onDragLeave(): void {\r\n    this.isDragging = false;\r\n  }\r\n\r\n  startImageCropping(event: any): void {\r\n    this.imageChangedEvent = event;\r\n    this.isCropping = true;\r\n  }\r\n\r\n  imageCropped(event: ImageCroppedEvent): void {\r\n    this.croppedImage = event.base64;\r\n  }\r\n\r\n  cropImage(): void {\r\n    this.imageUrl = this.croppedImage;\r\n    this.isImageUploaded = true;\r\n    this.isCropping = false;\r\n  }\r\n\r\n  cancelCropping(): void {\r\n    this.isCropping = false;\r\n  }\r\n\r\n  deleteImage(): void {\r\n    this.imageUrl = null;\r\n    this.isImageUploaded = false;\r\n  }\r\n\r\n  triggerFileInput(): void {\r\n    this.fileInput.nativeElement.click(); // Use nativeElement to access the input element\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-profile-picture',\r\n  templateUrl: './image-upload.component.html',\r\n  styleUrls: ['./image-upload.component.css']\r\n})\r\nexport class ImageUploadComponent {\r\n  profileImage: string | ArrayBuffer | null = null;\r\n\r\n  onFileSelected(event: Event): void {\r\n    const input = event.target as HTMLInputElement;\r\n    if (input.files && input.files[0]) {\r\n      const reader = new FileReader();\r\n      reader.onload = () => {\r\n        this.profileImage = reader.result;\r\n      };\r\n      reader.readAsDataURL(input.files[0]);\r\n    }\r\n  }\r\n\r\n  onDragOver(event: DragEvent): void {\r\n    event.preventDefault();\r\n  }\r\n\r\n  onDrop(event: DragEvent): void {\r\n    event.preventDefault();\r\n    if (event.dataTransfer && event.dataTransfer.files.length > 0) {\r\n      const file = event.dataTransfer.files[0];\r\n      const reader = new FileReader();\r\n      reader.onload = () => {\r\n        this.profileImage = reader.result;\r\n      };\r\n      reader.readAsDataURL(file);\r\n    }\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".image-upload-container {\r\n  width: 300px;\r\n  margin: 0 auto;\r\n}\r\n\r\n.profile-picture-container {\r\n  position: relative;\r\n  width: 100%;\r\n  padding-bottom: 100%;\r\n  border: 2px solid #ddd;\r\n  border-radius: 50%;\r\n  overflow: hidden;\r\n}\r\n\r\n.profile-picture {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n.uploaded-image {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  border-radius: 50%;\r\n  cursor: pointer;\r\n}\r\n\r\n.delete-button {\r\n  position: absolute;\r\n  top: 10px;\r\n  right: 10px;\r\n  background: transparent;\r\n  border: none;\r\n  cursor: pointer;\r\n}\r\n\r\n.drag-drop-zone {\r\n  width: 100%;\r\n  height: 100%;\r\n  border: 2px dashed #ccc;\r\n  border-radius: 50%;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  cursor: pointer;\r\n  transition: background-color 0.3s;\r\n}\r\n\r\n.drag-drop-zone.dragging {\r\n  background-color: #e0e0e0;\r\n}\r\n\r\n.drag-text {\r\n  text-align: center;\r\n}\r\n\r\n.drag-text img {\r\n  width: 50px;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.drag-text p {\r\n  margin: 0;\r\n  font-size: 14px;\r\n  color: #666;\r\n}\r\n\r\nbutton {\r\n  margin-top: 10px;\r\n  cursor: pointer;\r\n}\r\n",
+                    "data": ".profile-container {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  padding: 20px;\r\n}\r\n\r\n.profile-picture {\r\n  width: 150px;\r\n  height: 150px;\r\n  border-radius: 50%;\r\n  overflow: hidden;\r\n  background-color: #e0e0e0;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  margin-right: 20px;\r\n}\r\n\r\n.profile-picture img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n}\r\n\r\n.placeholder {\r\n  width: 80%;\r\n  height: 80%;\r\n  background-color: #9e9e9e;\r\n  border-radius: 50%;\r\n}\r\n\r\n.upload-area {\r\n  width: 200px;\r\n  height: 150px;\r\n  border: 2px dashed #b0bec5;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n  cursor: pointer;\r\n  text-align: center;\r\n  position: relative;\r\n}\r\n\r\n.upload-area:hover {\r\n  background-color: #f0f0f0;\r\n}\r\n\r\n.upload-icon {\r\n  width: 40px;\r\n  height: 40px;\r\n  /* background-image: url('assets/upload-icon.PNG'); */\r\n  background-size: contain;\r\n  background-repeat: no-repeat;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.upload-area p {\r\n  color: #607d8b;\r\n  font-size: 14px;\r\n  font-weight: bold;\r\n}\r\n\r\ninput[type=\"file\"] {\r\n  display: none;\r\n}\r\n",
                     "styleUrl": "./image-upload.component.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"image-upload-container\">\r\n  <div class=\"profile-picture-container\" *ngIf=\"!isCropping\">\r\n    <div class=\"profile-picture\">\r\n      <div *ngIf=\"isImageUploaded; else uploadPlaceholder\">\r\n        <img [src]=\"imageUrl\" alt=\"Uploaded Image\" class=\"uploaded-image\" (click)=\"triggerFileInput()\" />\r\n        <button class=\"delete-button\" (click)=\"deleteImage()\">\r\n          <img src=\"assets/trash-icon.svg\" alt=\"Delete\" />\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <ng-template #uploadPlaceholder>\r\n    <div \r\n      class=\"drag-drop-zone\" \r\n      [class.dragging]=\"isDragging\"\r\n      (drop)=\"onDrop($event)\" \r\n      (dragover)=\"onDragOver($event)\" \r\n      (dragleave)=\"onDragLeave()\"\r\n      (click)=\"triggerFileInput()\">\r\n      <input type=\"file\" accept=\"image/*\" #fileInput style=\"display: none;\" (change)=\"onImageSelected($event)\" />\r\n      <div class=\"drag-text\">\r\n        <img src=\"assets/upload-icon.png\" alt=\"Upload Icon\" />\r\n        <p>Drag Image or Click to Replace</p>\r\n      </div>\r\n    </div>\r\n  </ng-template>\r\n\r\n  <div *ngIf=\"isCropping\">\r\n    <image-cropper\r\n      [imageChangedEvent]=\"imageChangedEvent\"\r\n      [maintainAspectRatio]=\"true\"\r\n      [aspectRatio]=\"1/1\"\r\n      [resizeToWidth]=\"300\"\r\n      format=\"png\"\r\n      (imageCropped)=\"imageCropped($event)\"\r\n      [cropperMinWidth]=\"200\"\r\n      [cropperMinHeight]=\"200\"\r\n    ></image-cropper>\r\n    <button (click)=\"cropImage()\">Crop Image</button>\r\n    <button (click)=\"cancelCropping()\">Cancel</button>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<div class=\"profile-container\">\r\n  <div class=\"profile-picture\">\r\n    <img *ngIf=\"profileImage\" [src]=\"profileImage\" alt=\"Profile\" />\r\n    <div *ngIf=\"!profileImage\" class=\"placeholder\"></div>\r\n  </div>\r\n  <div\r\n    class=\"upload-area\"\r\n    (dragover)=\"onDragOver($event)\"\r\n    (drop)=\"onDrop($event)\"\r\n    (click)=\"fileInput.click()\"\r\n  >\r\n    <input\r\n      type=\"file\"\r\n      accept=\"image/*\"\r\n      #fileInput\r\n      (change)=\"onFileSelected($event)\"\r\n      style=\"display: none\"\r\n    />\r\n    <div class=\"upload-icon\"></div>\r\n    <p>DRAG IMAGE <br />OR CLICK TO ADD</p>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "PageComponent",
@@ -780,7 +597,7 @@
                 "linktype": "component",
                 "name": "ImageUploadComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/18",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {

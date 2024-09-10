@@ -1,56 +1,67 @@
-.image-upload-container {
+.profile-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.profile-picture-container {
-  width: 100%;
-  height: 150px;
-  margin-bottom: 10px;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .profile-picture {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.uploaded-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.delete-button {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  border: none;
-  background: transparent;
-}
-
-.drag-drop-zone {
-  width: 100%;
-  height: 100px;
-  border: 2px dashed #007BFF;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #e0e0e0;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  cursor: pointer;
+  margin-right: 20px;
 }
 
-.drag-drop-zone.dragging {
-  border-color: #0056b3;
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  width: 80%;
+  height: 80%;
+  background-color: #9e9e9e;
+  border-radius: 50%;
+}
+
+.upload-area {
+  width: 200px;
+  height: 150px;
+  border: 2px dashed #b0bec5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+.upload-area:hover {
+  background-color: #f0f0f0;
 }
 
 .upload-icon {
-  width: 24px;
-  height: 24px;
-  margin-bottom: 5px;
+  width: 40px;
+  height: 40px;
+  /* background-image: url('assets/upload-icon.PNG'); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+}
+
+.upload-area p {
+  color: #607d8b;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input[type="file"] {
+  display: none;
 }

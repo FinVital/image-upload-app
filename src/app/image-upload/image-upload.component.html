@@ -1,24 +1,22 @@
-<div class="image-upload-container">
-  <div class="profile-picture-container">
-    <ng-container *ngIf="isImageUploaded; else uploadPlaceholder">
-      <div class="profile-picture">
-        <img [src]="imageUrl" alt="Uploaded Image" class="uploaded-image" (click)="triggerFileInput()" />
-        <button class="delete-button" (click)="deleteImage()">
-          <img src="assets/trash-icon.svg" alt="Delete" />
-        </button>
-      </div>
-    </ng-container>
+<div class="profile-container">
+  <div class="profile-picture">
+    <img *ngIf="profileImage" [src]="profileImage" alt="Profile" />
+    <div *ngIf="!profileImage" class="placeholder"></div>
   </div>
-
-  <ng-template #uploadPlaceholder>
-    <div class="drag-drop-zone" [class.dragging]="isDragging"
-      (drop)="onDrop($event)" 
-      (dragover)="onDragOver($event)" 
-      (dragleave)="onDragLeave()"
-      (click)="triggerFileInput()">
-      <input type="file" accept="image/*" #fileInput style="display: none;" (change)="onImageSelected($event)" />
-      <img src="assets/upload-icon.png" alt="Upload Icon" class="upload-icon" />
-      <p>Drag Image or Click to Add</p>
-    </div>
-  </ng-template>
+  <div
+    class="upload-area"
+    (dragover)="onDragOver($event)"
+    (drop)="onDrop($event)"
+    (click)="fileInput.click()"
+  >
+    <input
+      type="file"
+      accept="image/*"
+      #fileInput
+      (change)="onFileSelected($event)"
+      style="display: none"
+    />
+    <div class="upload-icon"></div>
+    <p>DRAG IMAGE <br />OR CLICK TO ADD</p>
+  </div>
 </div>
