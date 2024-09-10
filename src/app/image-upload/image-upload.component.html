@@ -1,8 +1,9 @@
 <div class="profile-container">
   <div class="profile-picture">
-    <img *ngIf="profileImage" [src]="profileImage" alt="Profile" />
-    <div *ngIf="!profileImage" class="placeholder"></div>
+    <img *ngIf="croppedImage || profileImage" [src]="croppedImage || profileImage" alt="Profile" />
+    <div *ngIf="!profileImage && !croppedImage" class="placeholder"></div>
   </div>
+
   <div
     class="upload-area"
     (dragover)="onDragOver($event)"
@@ -18,5 +19,20 @@
     />
     <div class="upload-icon"></div>
     <p>DRAG IMAGE <br />OR CLICK TO ADD</p>
+  </div>
+
+  <!-- Cropper only appears if an image is selected and cropping hasn't finished -->
+  <div *ngIf="profileImage && !croppedImage" class="cropper-container">
+    <div class="cropper-wrapper">
+      <img
+        [src]="profileImage"
+        class="cropper-image"
+        (mousedown)="startCropping($event)"
+        (mousemove)="onCrop($event)"
+        (mouseup)="endCropping()"
+        #cropImage
+      />
+      <div *ngIf="isCropping" class="crop-area" [ngStyle]="cropStyle"></div>
+    </div>
   </div>
 </div>

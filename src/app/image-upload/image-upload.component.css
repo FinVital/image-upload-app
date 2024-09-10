@@ -50,7 +50,7 @@
 .upload-icon {
   width: 40px;
   height: 40px;
-  /* background-image: url('assets/upload-icon.PNG'); */
+  /* background-image: url('assets/upload-icon.svg'); */
   background-size: contain;
   background-repeat: no-repeat;
   margin-bottom: 10px;
@@ -64,4 +64,26 @@
 
 input[type="file"] {
   display: none;
+}
+
+.cropper-container {
+  position: relative;
+  width: fit-content;
+  margin-top: 20px;
+}
+
+.cropper-wrapper {
+  position: relative;
+}
+
+.cropper-image {
+  max-width: 100%;
+  cursor: crosshair;
+}
+
+.crop-area {
+  position: absolute;
+  border: 2px dashed #ff9800;
+  background: rgba(255, 152, 0, 0.2);
+  pointer-events: none;
 }
